@@ -62,7 +62,7 @@ namespace IPPackageGenerator
 
                     var endPoint = new IPEndPoint(ipAddress, portValue);
 
-                    using var socket = new Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.IP);
+                    using var socket = new Socket(ipAddress.AddressFamily, SocketType.Raw, ProtocolType.IP);
 
                     var messageToSend = Encoding.UTF8.GetBytes(MessageInput.Text);
 
