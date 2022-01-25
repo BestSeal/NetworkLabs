@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sniffer", "Sniffer\Sniffer.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpLoader", "HttpLoader\HttpLoader.csproj", "{09E2605E-072E-408E-A91C-95DBE97B3FA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpViewer", "FtpViewer\FtpViewer.csproj", "{C7B8E795-2DB0-42E8-AF8E-6811733C58AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{09E2605E-072E-408E-A91C-95DBE97B3FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09E2605E-072E-408E-A91C-95DBE97B3FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09E2605E-072E-408E-A91C-95DBE97B3FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B8E795-2DB0-42E8-AF8E-6811733C58AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B8E795-2DB0-42E8-AF8E-6811733C58AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7B8E795-2DB0-42E8-AF8E-6811733C58AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7B8E795-2DB0-42E8-AF8E-6811733C58AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
