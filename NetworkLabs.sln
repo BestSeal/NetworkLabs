@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpLoader", "HttpLoader\Ht
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpViewer", "FtpViewer\FtpViewer.csproj", "{C7B8E795-2DB0-42E8-AF8E-6811733C58AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmtpClient", "SmtpClient\SmtpClient.csproj", "{575BE569-AA44-4C1A-8211-01310FE4EAF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{C7B8E795-2DB0-42E8-AF8E-6811733C58AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7B8E795-2DB0-42E8-AF8E-6811733C58AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7B8E795-2DB0-42E8-AF8E-6811733C58AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575BE569-AA44-4C1A-8211-01310FE4EAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575BE569-AA44-4C1A-8211-01310FE4EAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575BE569-AA44-4C1A-8211-01310FE4EAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575BE569-AA44-4C1A-8211-01310FE4EAF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

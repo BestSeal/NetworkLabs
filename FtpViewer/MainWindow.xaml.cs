@@ -54,7 +54,6 @@ namespace FtpViewer
         {
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
             {
-                var selectedItem = ArchiverViewer.SelectedItem;
                 if (!string.IsNullOrEmpty(Path.Text))
                 {
                     foreach (FileView item in ArchiverViewer.ItemsSource)

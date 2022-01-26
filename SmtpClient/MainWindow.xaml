@@ -1,0 +1,91 @@
+﻿<Window x:Class="SmtpClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmtpClient"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl>
+            <TabItem Name="SendMessageTab" Header="Send message">
+                <Grid Width="500" Height="500" VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="300"></RowDefinition>
+                        <RowDefinition Height="60"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100">From:</Label>
+                    <TextBlock Grid.Row="0" Name="FromAddr" VerticalAlignment="Top" HorizontalAlignment="Left"
+                               Margin="45, 5, 10, 10">
+                        from.com
+                    </TextBlock>
+
+                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100">To:</Label>
+                    <TextBox Grid.Row="1" Name="ToAddr" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200"
+                             Height="20"
+                             Margin="45, 5, 10, 10">
+                        to.com
+                    </TextBox>
+
+                    <Label Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100">Title:</Label>
+                    <TextBox Grid.Row="2" Name="Title" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200"
+                             Height="20"
+                             Margin="45, 5, 10, 10">
+                        new title
+                    </TextBox>
+                    <TextBox Grid.Row="3" Name="Content" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400"
+                             Height="280"
+                             Margin="45, 5, 10, 10">
+                    </TextBox>
+
+                    <Button Click="SendMessage" Grid.Row="4" VerticalAlignment="Top" HorizontalAlignment="Left"
+                            Width="70" Height="30">
+                        Send
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Name="MailsListTab" Header="View mails list" IsSelected="True">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="530"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <ListView MouseDoubleClick="ViewItemSelected" ItemsSource="{Binding Messages}" Name="MessagesView"
+                              Margin="10,10,10,10" Width="500" Height="500"
+                              HorizontalAlignment="Left" IsSynchronizedWithCurrentItem="True">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=FromAddr}" Width="100">From</GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Title}" Width="380">Title</GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=FromAddr}" />
+                                    <TextBlock Text="{Binding Path=Title}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Button Grid.Column="0" Click="UpdateMailsList" VerticalAlignment="Bottom"
+                            HorizontalAlignment="Left" Margin="5"
+                            Width="70" Height="25">
+                        Update
+                    </Button>
+                    <WebBrowser HorizontalAlignment="Left" Margin="25" Width="600" Height="600" Grid.Column="1"
+                                Name="MessageViewer">
+                    </WebBrowser>
+                    <Button Click="DeleteSelected" ToolTip="Delete selected message" Grid.Column="1" Width="25" Height="25"  HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                            fa:Awesome.Content="Trash" TextElement.FontSize="20" Margin="20"
+                            TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
